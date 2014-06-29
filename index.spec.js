@@ -38,4 +38,10 @@ describe('rgba-generate', function(){
 		expect(colorGenerator).to.be.ok;
 		expect(colorGenerator(0)).to.match(/^rgb\(\d{1,3},\d{1,3},\d{1,3},0\)$/);
 	});
+
+	it('should work with just an opacity value passed to ctor', function(){
+		var colorGenerator = ColorGenerator(0.8);
+		expect(colorGenerator).to.be.ok;
+		expect(colorGenerator()).to.match(/^rgb\(\d{1,3},\d{1,3},\d{1,3},0.8\)$/);
+	});
 });

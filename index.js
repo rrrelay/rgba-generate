@@ -2,10 +2,16 @@ function _random(){ return Math.floor(Math.random()*255); }
 function _isNumber(n){ return !isNaN(n); }
 
 function ColorGenerator(params){
-	params = Object(params);
+	var defaultOpacity;
 
-	var defaultOpacity = _isNumber(params.opacity) ? Number(params.opacity) : 1;
-	
+	if (_isNumber(params)) {
+		defaultOpacity = Number(params);
+	} else {
+		params = Object(params);
+
+		defaultOpacity = _isNumber(params.opacity) ? Number(params.opacity) : 1;
+	}
+
 	var generate = function(opacity){
 		opacity = _isNumber(opacity) ? Number(opacity) : defaultOpacity;
 
