@@ -1,0 +1,27 @@
+{
+  "name": "rgba-generate",
+  "version": "0.0.0",
+  "description": "generate a color",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rrrelay/rgba-generate.git"
+  },
+  "keywords": [
+    "color",
+    "random"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrrelay/rgba-generate/issues"
+  },
+  "homepage": "https://github.com/rrrelay/rgba-generate",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1"
+  }
+}
