@@ -16,7 +16,7 @@ function ColorGenerator(params){
 		opacity = _isNumber(opacity) ? Number(opacity) : defaultOpacity;
 
 		return [
-			'rgb(', 
+			'rgba(', 
 			_random(),
 			',',
 			_random(),
