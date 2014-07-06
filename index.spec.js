@@ -44,4 +44,10 @@ describe('rgba-generate', function(){
 		expect(colorGenerator).to.be.ok;
 		expect(colorGenerator()).to.match(/^rgba\(\d{1,3},\d{1,3},\d{1,3},0.8\)$/);
 	});
+
+	it('should be able to convert to hex', function(){
+		var colorGenerator = ColorGenerator(0.8);
+		expect(colorGenerator).to.be.ok;
+		expect(colorGenerator().toHex()).to.match(/^#[a-f\d]{6}$/);
+	});
 });
